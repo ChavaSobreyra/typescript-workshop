@@ -1,7 +1,20 @@
+---
+theme: "night"
+transition: "convex"
+highlight: "darcula"
+---
+
+# Typescript Workshop
+
+---
+
 ## Prerequisites
 
 Vue-cli
+
 VS Code (if wanting to live share)
+
+---
 
 ## Introduction
 
@@ -10,11 +23,15 @@ VS Code (if wanting to live share)
 - Typescript shines at scale, these small examples won't do it justice
 - eliminiating `if(typof foo === 'string')
 
+---
+
 ## Introduction to Using Typescript in Vue
 
 - Class Based Syntax
 - @Decorators
 - Often times less verbose than vanilla javascript
+
+---
 
 ## Some Fun Stuff We Will Use
 
@@ -24,10 +41,14 @@ VS Code (if wanting to live share)
 - Pug https://codeburst.io/getting-started-with-pug-template-engine-e49cfa291e33
 - Stylus http://stylus-lang.com/docs/selectors.html
 
+---
+
 ## Explain what we are doing today
 
 - Pairs of 2
 - Work on a piece, then regroup
+
+---
 
 ## Part 0: Vanilla Typescript
 
