@@ -1,9 +1,9 @@
 class TypedEncabulator {
-  private properties
-  private readonly secret
+  private name: string
+  private readonly secret: boolean
 
-  constructor(properties, secret) {
-    this.properties = properties
+  constructor(name, secret) {
+    this.name = name
     this.secret = secret
   }
 

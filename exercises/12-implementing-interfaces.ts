@@ -4,11 +4,11 @@
  * and use the typescript compiler feedback to get these classes into line
  */
 
-interface CommunicationChannel {
+interface Messenger {
   send(message)
 }
 
-class FacebookMessenger {
+class FacebookMessenger implements Messenger {
   public send(message) {
     // FacebookMessenger specific logic
   }
@@ -21,26 +21,26 @@ class WhatsApp {
 }
 
 class SMS {
-  public up(message) {
+  public messageUp(message, carrierData) {
     // SMS  specific logic
   }
 }
 
 class IMessage {
-  public pushMessage(message) {
+  public pushMessage(message, options) {
     // iMessage specific logic
   }
 }
 
 /**
  * Having certainty that all these different classes adhere to the same interface starts to
- * unlock powerful OOP pattersn like polymorphism
+ * unlock powerful OOP pattern like polymorphism
  */
 
-class Messenger {
+class MessengerApp {
   private chatClient
 
-  constructor(chatClient: CommunicationChannel) {
+  constructor(chatClient: Messenger) {
     this.chatClient = chatClient
   }
 
@@ -49,4 +49,4 @@ class Messenger {
   }
 }
 
-const unifiedMessagingApp = new Messenger(new SMS())
+const unifiedMessagingApp = new MessengerApp(new SMS())
