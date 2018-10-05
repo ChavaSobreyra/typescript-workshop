@@ -1,21 +1,17 @@
 import {Pizza, Pizzeria} from '../index.types'
 
 class Dominos implements Pizzeria {
-  private readonly name = `Domino's`
-  private readonly phoneNumber = 561738191
-  private readonly offersDelivery = true
-  private readonly price: number
-  private readonly driver: string
-
-  constructor(price: number, driver: string) {
-    this.price = price
-    this.driver = driver
-  }
+  private readonly name = 'Domino\'s'
+  private readonly price: number = 12.55
+  private readonly driver: string = 'Jorge Bike Vera'
 
   public placeOrder(pizza: Pizza) {
+    const estimatedWait = pizza.size >= 14 ? 45 : 30
     return {
+      name: this.name,
       price: this.price,
-      driver: this.driver
+      driver: this.driver,
+      estimatedWait
     }
   }
 }

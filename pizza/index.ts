@@ -4,9 +4,7 @@ function orderPizza(pizza: Pizza, provider: Pizzeria, deliveryInstructions: Deli
   const placeOrderSummary = provider.placeOrder(pizza)
 
   return {
-    price: placeOrderSummary.price,
-    driver: placeOrderSummary.driver,
-    estimatedWait: 32,
+    ...placeOrderSummary,
     orderSummary: {
       pizza,
       deliveryInstructions,

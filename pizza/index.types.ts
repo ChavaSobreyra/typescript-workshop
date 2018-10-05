@@ -24,7 +24,9 @@ export interface Receipt {
 
 export interface Pizzeria {
   placeOrder(pizza: Pizza): {
+    name: string,
     price: number,
-    driver: string
+    driver: string,
+    estimatedWait: number
   }
 }
