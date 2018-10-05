@@ -1,33 +1,97 @@
 ---
-theme: "night"
-transition: "convex"
-highlight: "darcula"
+theme : "night"
+transition: "fade"
+highlightTheme : "monokai-sublime"
 ---
 
-# Typescript Workshop
+### TypeScript Workshop
 
----
-
-## Prerequisites
-
-Vue-cli
-
-VS Code (if wanting to live share)
 
 ---
 
-## Introduction
-
-- Why Typescript?
-- Quick review of how to use Typescript
-- Typescript shines at scale, these small examples won't do it justice
-- eliminiating `if(typof foo === 'string')
+### Why TypeScript?
 
 ---
 
-## Introduction to Using Typescript in Vue
+TypeScript makes our job easier
 
-- Class Based Syntax
+Note: these examples won't do it justice
+
+---
+
+ How does TypeScript make my job more easy?
+
+---
+
+```
+Error: Cannot read property 'foo' of undefined
+```
+
+Note: you cannot use a variable that is not defined!
+
+---
+
+## Introduction to Using TypeScript in Vue
+
+---
+
+#### Choosing Between Vue.extend() and Vue Class Component
+
+---
+
+Vue.extend()
+
+```
+export default Vue.extend({
+  data () {
+    return {
+      message: 'Hello'
+    }
+  },
+  computed: {
+    reversedMessage () {
+      return this.message.split('').reverse().join('')
+    }
+  },
+  methods: {
+    changeMessage () {
+      this.message = 'Good bye'
+    }
+  }
+})
+```
+
+Note: fights to keep current style
+
+---
+
+Class Component
+
+```
+@Component
+export default class MyComponent extends Vue {
+  message = "hi"
+
+  get reverseMessage() {
+    return this.message.split('').reverse().join('')
+  }
+
+  changeMessage() {
+    this.message = "Good bye'
+  }
+}
+```
+
+Note: Embraces javascript
+
+---
+
+#### Decorators
+
+Note: Often times less verbose than vanilla javascript
+
+---
+
 - @Decorators
 - Often times less verbose than vanilla javascript
 
@@ -35,46 +99,81 @@ VS Code (if wanting to live share)
 
 ## Some Fun Stuff We Will Use
 
+- TypeScript
 - Vue CLI
-- Typescript
 - Jest
 - Pug https://codeburst.io/getting-started-with-pug-template-engine-e49cfa291e33
 - Stylus http://stylus-lang.com/docs/selectors.html
 
 ---
 
-## Explain what we are doing today
-
-- Pairs of 2
-- Work on a piece, then regroup
+## Exercises
 
 ---
 
-## Part 0: Vanilla Typescript
+
+### Defining Basic Types
+
+- string
+- number
+- boolean
+
+---
+
+### Enums
+
+Enums allow us to define a collection or set of options.
+
+Enums allow you to define possible pizza toppings as pepperoni, sausace, onions, but never pineapple.
+
+---
+
+### Defining Args and Returns
+
+You can define types on function arguments, and also on function return values
+
+- Catching bugs like passing wrong arguments, or trying to use a property of an undefined
+
+---
+
+### Promises and Async Functions
+
+`Promise<string>`
+
+---
+
+### Consuming Your Interfaces
+
+- Automatic imports
+- Code completion
+- Catching bugs
+
+---
+
+### Refactoring
+
+- Change within file
+- Changes to intefaces with many consumers
+  [implementations code lens](https://code.visualstudio.com/docs/languages/typescript#_implementations-codelens)
+
+---
+
+### OOPy Classes
+
+- es6 classes in node
+- public / private (no ugly symbols!)
+
+---
+
+### Polymorphism (pizzerias)
+
+Allows us to have multiple pizzeria which conform to the same interace
+
+---
 
 - namesspaces // TODO: research this before talking about it!
 
 - type inference: const x = "hello" in TypeScript is the same as const x : string = "hello"
-- transpiled code is still very readable - [http://www.typescriptlang.org/play/](http://www.typescriptlang.org/play/_)
-- Adding types to an object/schema
-- Adding types to functions
-  - Adding types to function which return a promise
-- creating interface and using it in another file
-  - [automatic imports](https://code.visualstudio.com/docs/languages/typescript#_auto-imports)
-  - code completion / not having to reference another file
-  - knowing when you are passing wrong arguments (catching bugs!!!)
-  - es6 classes in node
-  - public / private (no ugly symbols!)
-- changing an interface which others depend on
-  - renaming a file which others depend on
-  - ever been afraid to change something because you don't know exactly everone else that relies on it? [implementations code lens](https://code.visualstudio.com/docs/languages/typescript#_implementations-codelens)
-- strict null checking
-  - who is sick of this error `cannot read property 'x' of undefined`
-  - you cannot use a variable that is not defined!
-  - identify issues early!
-  - --strictNullChecks
-- unlocking oop patterns
-  - polymorphism
 
 ## Part 1: Working in the Vuex Store to get offers
 
