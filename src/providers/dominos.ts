@@ -1,4 +1,4 @@
-import {Pizza, Pizzeria} from '@/index.types'
+import {Pizza, Pizzeria} from '@/interfaces/index.types'
 
 class Dominos implements Pizzeria {
   private readonly name: string = 'Domino\'s'

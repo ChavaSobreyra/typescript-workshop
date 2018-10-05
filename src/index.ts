@@ -1,4 +1,4 @@
-import {Pizza, DeliveryInstructions, Receipt, Pizzeria} from './index.types'
+import {Pizza, DeliveryInstructions, Receipt, Pizzeria} from './interfaces/index.types'
 
 function orderPizza(pizza: Pizza, provider: Pizzeria, deliveryInstructions: DeliveryInstructions): Receipt {
   const placeOrderSummary = provider.placeOrder(pizza)
