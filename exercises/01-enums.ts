@@ -1,9 +1,30 @@
-describe('exercise 1', () => {
-  /**
-   * Enums
-   */
+const grossPizza = {
+  toppings: ['peppers', 'onions', 'pepperoni', 'pineapple']
+}
 
-  const pizza = {
-    toppings: ['pepperoni', 'sausage', 'onions'], // but never pineapple!
-  }
-})
+/**
+ * I want to make sure the only possible toppings are
+ * - peppers
+ * - onions
+ * - pepperoni
+ *
+ * But NEVER pineapple
+ */
+
+interface GoodPizza {
+  toppings: Toppings[]
+}
+
+/**
+ * We can accomplish this using enums!
+ */
+
+enum Toppings {
+  pepperoni,
+  peppers,
+  onions
+}
+
+const pizza: GoodPizza = {
+  toppings: ['Toppings.pepperoni', Toppings.peppers, Toppings.onions, Toppings.pineapple]
+}

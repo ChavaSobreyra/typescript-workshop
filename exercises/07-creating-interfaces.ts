@@ -1,6 +1,5 @@
 /**
- * Complete the following interface
- * so that it passes the typescript compiler
+ * Complete the interface
  */
 
 const pizza: PizzaOptions = {
