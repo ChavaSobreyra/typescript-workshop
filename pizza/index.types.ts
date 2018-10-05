@@ -13,6 +13,7 @@ export interface DeliveryInstructions {
 }
 
 export interface Receipt {
+  name: string,
   price: number,
   driver: string,
   estimatedWait: number,
