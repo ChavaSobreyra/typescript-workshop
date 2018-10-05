@@ -50,6 +50,7 @@ sandwiches: jimmy johns, jersey mike's
 
 <br>
 Each provider should have a get method with different fulfillment logic
+<br>
 ```
 examples:
 pizzas: pricing, wait times
@@ -61,6 +62,7 @@ sandwiches: available toppings, delivery drivers
 
 #### Our service will allows us to get these business object from different providers, using a standardized interface
 
+<br>
 ```javascript
 const pizza = orderPizza(pizza, provider)
 ```
