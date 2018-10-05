@@ -16,7 +16,8 @@ function orderPizza(pizza, deliveryAddress: string) {
 }
 
 /**
- * TODO: required args and feedback
+ * The call to order pizza below is wrong. Your IDE gives you instand feedback about
+ * that, and also gives you useful contextual information as you fix the problem
  */
 
 const pizzaReceipt = orderPizza({
