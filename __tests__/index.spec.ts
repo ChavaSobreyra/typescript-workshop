@@ -19,9 +19,9 @@
  */
 
 import orderPizza from '../src/index'
-import {DeliveryInstructions, Pizza, Toppings} from '../src/index.types'
-import Dominos from '../src/pizzeria/dominos'
-import PizzaHut from '../src/pizzeria/pizza-hut'
+import {DeliveryInstructions, Pizza, Toppings} from '../src/interfaces/index.types'
+import Dominos from '../src/providers/dominos'
+import PizzaHut from '../src/providers/pizza-hut'
 
 const pizza: Pizza = {
   size: 16,
