@@ -16,5 +16,3 @@ import moment from 'moment'
 const time = moment()
 
 console.log('time', time)
-
-// You can run this file using: ts-node exercises/09-using-javascript-libraries.ts

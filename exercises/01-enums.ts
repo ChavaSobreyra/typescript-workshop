@@ -26,5 +26,5 @@ enum Toppings {
 }
 
 const pizza: GoodPizza = {
-  toppings: ['Toppings.pepperoni', Toppings.peppers, Toppings.onions, Toppings.pineapple]
+  toppings: [Toppings.pepperoni, Toppings.peppers, Toppings.onions, Toppings.pineapple]
 }
