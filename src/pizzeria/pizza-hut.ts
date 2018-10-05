@@ -1,7 +1,7 @@
-import {Pizza, Pizzeria} from '../index.types'
+import {Pizza, Pizzeria} from '@/index.types'
 
 class PizzaHut implements Pizzeria {
-  private readonly name = `PizzaHut`
+  private readonly name: string = `PizzaHut`
   private readonly price: number = 11.2
   private readonly driver: string = 'Christian Subaru Alvarez'
 

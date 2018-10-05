@@ -1,7 +1,7 @@
-import {Pizza, Pizzeria} from '../index.types'
+import {Pizza, Pizzeria} from '@/index.types'
 
 class Dominos implements Pizzeria {
-  private readonly name = 'Domino\'s'
+  private readonly name: string = 'Domino\'s'
   private readonly price: number = 12.55
   private readonly driver: string = 'Jorge Bike Vera'
 

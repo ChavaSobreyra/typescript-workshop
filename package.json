@@ -32,7 +32,7 @@
       "^@/(.*)$": "<rootDir>/src/$1"
     },
     "testMatch": [
-      "**/src/*.spec.(js|jsx|ts|tsx)"
+      "**/__tests__/*.spec.(js|jsx|ts|tsx)"
     ],
     "testURL": "http://localhost/"
   }
